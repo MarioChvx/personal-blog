@@ -1,0 +1,271 @@
+baseURL: "https://mariochvx.com"
+languageCode: "en-us"
+title: "mariochvx.com"
+theme: hugo-profile
+
+# Paginate: 3
+# disqusShortname: gurusabarish
+# googleAnalytics: G-DWJJVE27WD
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Mario Chávez's Webpage"
+  description: Personal site where I talk about my professional history and interests, also about my hobbies.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: true
+
+  # Whether the fade animations on the home page will be enabled
+  animate: false
+
+  theme:
+    disableThemeToggle: false
+    # defaultTheme: "light" # dark
+
+  # font:
+  #   fontSize: 1.5rem # default: 1rem
+  #   fontWeight: 500 # default: 400
+  #   lineHeight: 1 # default: 1.5
+  #   textAlign: right # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  # navbar:
+  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+  #   brandName: "Profile" # Brand name for the brand | default is the title variable
+
+  #   menus:
+  #     disableAbout: true
+  #     disableExperience: true
+  #     disableEducation: true
+  #     disableProjects: true
+  #     disableAchievements: true
+  #     disableContact: true
+
+# Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Mario."
+    subtitle: "Software Developer"
+    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    image: /images/avatar.jpg
+    button:
+      enable: true
+      name: "Resume"
+      url: "/files/mario-chavez-resume.pdf"
+      download: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/MarioChvx
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/mariochvx/
+        - icon: fab fa-whatsapp
+          url: https://wa.me/5215515359878
+        - icon: fas fa-envelope
+          url: mailto:contactme@mariochvx.com
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+# About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.jpg"
+    content: |-
+      I am a Data Science student with a passion for Data Engineering, Backend Develop and Data Bases. I have a strong interest in learning about Big Data, Machine Learning, and OS.
+      Outside Software Development world I also enjoy PC Hardware, Calisthenics, Motorcycles and Cooking.
+
+      I am currently looking for work, open to learn new skills. developing personal projects and the technologies I like.
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "Python"
+        - "PostgreSQL"
+        - "GCP"
+        - "Linux"
+        - "Bash"
+        - "MarkDown"
+        - "Latex"
+
+# Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "First Line Specialist"
+        company: "Tecnostaff (Banorte)"
+        date: "2018 - 2018"
+        content: |-
+          **Technical Support**
+          - At first my duty was trying to restore the function of the blocked ATMs by sending remote commands if that didn't work I've to coordinated appointments for the maintenance and repair of ATMs.
+
+          **Data Base Administrator**
+          - Later, due to my knowledge in databases, I managed the database where the issues were recorded and I developed some scripts to optimize the CRUD process.
+
+# Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    # index: true
+    items:
+      - title: "Technical Skills"
+        school: 
+          name: "Platzi"
+          url: "https://platzi.com/home"
+        date: "Present"
+        content: "Online educational platform, where I learn new technologies and keep myself updated in other technologies, taking the courses available there."
+
+      - title: "Bachelor in Data Science"
+        school:
+          name: "Escuela Superior de Computo, IPN"
+          url: "https://www.escom.ipn.mx/"
+        date: "2021 - present"
+        content: |-
+          lorem
+
+      - title: "Bachelor of Engineering in Bionics"
+        school:
+          name: "Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas, IPN"
+          url: "https://www.upiita.ipn.mx/"
+        date: "2019 - 2021"
+        content: |-
+          Extracurricular Activities
+            - I was a volunteer tutor teaching topics such as Python programing, C programing, Calculus etc.
+            - Also I was one of the responsibles for the calisthenics club, .
+
+# projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Hugo Profile
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Image Converter
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        # badges:
+        #   - "Django"
+        #   - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+# Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Winner of Physics Statal Contest
+        content: Annual physics contest organized by the government. It consist on three fazes of eliminatory exams and then the winner is selected.
+        # url: https://example.com
+
+  #Contact
+  contact:
+    enable: true
+    title: "Send me an email"
+    content: If you want to collaborate with me, discuss or chat about my site, give me a tip or anything.
+    email: mailto:contactme@mariochvx.com
+    btnName: contactme@mariochv.com
+
+  footer:
+    # recentPosts: false
+    socialNetworks:
+      github: https://github.com
+      linkedin: https://linkedin.com
+      # twitter: https://twitter.com
+      # instagram: https://instagram.com
+      # facebook: https://facebook.com
