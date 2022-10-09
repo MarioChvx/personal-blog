@@ -185,7 +185,6 @@ params:
         content: |-
            Extracurricular Activities
             - I was a volunteer tutor teaching topics such as Python programing, C programing, Calculus etc.
-            - Also I was one of the responsibles for the calisthenics club, .
 
       - title: "Bachelor of Engineering in Bionics"
         school:
@@ -240,14 +239,14 @@ params:
     enable: true
     title: "Send me an email"
     content: If you want to collaborate with me, discuss or chat about my site, give me a tip or anything.
-    email: mailto:contactme@mariochvx.com
+    email: contactme@mariochvx.com
     btnName: contactme@mariochvx.com
 
   footer:
     # recentPosts: false
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
+      github: https://github.com/MarioChvx
+      linkedin: https://linkedin.com/in/mariochvx/
       # twitter: https://twitter.com
       # instagram: https://instagram.com
       # facebook: https://facebook.com
