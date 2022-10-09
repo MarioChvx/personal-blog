@@ -203,7 +203,7 @@ params:
     items:
       - title: OTP ETL
         content: A ETL script to store historical data about some players from League of Legends game.
-        image: /images/projects/profile.png
+        image: /images/projects/sionornn.jpg
         featured:
           name: Source Code
           link: https://github.com/MarioChvx/otp_etl.git
@@ -217,7 +217,7 @@ params:
 
       - title: Console Manga Downloader
         content: A command line console to download manga from various websites, with just a little bit of information.
-        image: /images/projects/converter.jpg
+        image: /images/projects/keyboardmanga.png
         featured:
           name: Source Code
           link: https://github.com/MarioChvx/console_manga_downloader.git
