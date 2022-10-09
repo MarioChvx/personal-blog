@@ -1,6 +1,6 @@
 baseURL: "https://mariochvx.com"
 languageCode: "en-us"
-title: "mariochvx.com"
+title: "Mario Chávez"
 theme: hugo-profile
 
 # Paginate: 3
@@ -18,7 +18,7 @@ Menus:
       name: Blog
       title: Blog posts
       url: /blogs
-      weight: 1
+      weight: 2
 
     # - identifier: gallery
     #   name: Gallery
@@ -26,7 +26,7 @@ Menus:
     #   url: /gallery
     #   weight: 2
 
-    #Dropdown menu
+# Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
     #   name: Dropdown
@@ -48,7 +48,7 @@ params:
   title: "Mario Chávez's Webpage"
   description: Personal site where I talk about my professional history and interests, also about my hobbies.
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  favicon: "/2.svg"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -105,7 +105,8 @@ params:
     intro: "Hi, my name is"
     title: "Mario."
     subtitle: "Software Developer"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    content: |- 
+      A Data Science student. I tend to be more interested in Data and Backend technologies.
     image: /images/avatar.jpg
     button:
       enable: true
@@ -182,7 +183,9 @@ params:
           url: "https://www.escom.ipn.mx/"
         date: "2021 - present"
         content: |-
-          lorem
+           Extracurricular Activities
+            - I was a volunteer tutor teaching topics such as Python programing, C programing, Calculus etc.
+            - Also I was one of the responsibles for the calisthenics club, .
 
       - title: "Bachelor of Engineering in Bionics"
         school:
@@ -192,57 +195,36 @@ params:
         content: |-
           Extracurricular Activities
             - I was a volunteer tutor teaching topics such as Python programing, C programing, Calculus etc.
-            - Also I was one of the responsibles for the calisthenics club, .
+            - Also I was one of the responsible for the calisthenics club.
 
 # projects
   projects:
     enable: true
     # title: "Custom Name"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+      - title: OTP ETL
+        content: A ETL script to store historical data about some players from League of Legends game.
         image: /images/projects/profile.png
-        featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
+        # featured:
+        #   name: Demo
+        #   link: https://hugo-profile.netlify.app
+        badges:
+          - "Python"
+          - "PostgreSQL"
+          - "API"
         links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
           - icon: fab fa-github
             url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
 
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+      - title: Console Manga Downloader
+        content: A command line console to download manga from various websites, with just a little bit of information.
         image: /images/projects/converter.jpg
-        featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
-        # badges:
-        #   - "Django"
-        #   - "Bootstrap"
+        badges:
+          - "Python"
+          - "BS4"
         links:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/converter
-
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
-        featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
 
 # Achievements
   achievements:
@@ -259,7 +241,7 @@ params:
     title: "Send me an email"
     content: If you want to collaborate with me, discuss or chat about my site, give me a tip or anything.
     email: mailto:contactme@mariochvx.com
-    btnName: contactme@mariochv.com
+    btnName: contactme@mariochvx.com
 
   footer:
     # recentPosts: false
