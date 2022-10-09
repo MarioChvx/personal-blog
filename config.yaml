@@ -204,26 +204,30 @@ params:
       - title: OTP ETL
         content: A ETL script to store historical data about some players from League of Legends game.
         image: /images/projects/profile.png
-        # featured:
-        #   name: Demo
-        #   link: https://hugo-profile.netlify.app
+        featured:
+          name: Source Code
+          link: https://github.com/MarioChvx/otp_etl.git
         badges:
           - "Python"
           - "PostgreSQL"
           - "API"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
+            url: https://github.com/MarioChvx/otp_etl.git
 
       - title: Console Manga Downloader
         content: A command line console to download manga from various websites, with just a little bit of information.
         image: /images/projects/converter.jpg
+        featured:
+          name: Source Code
+          link: https://github.com/MarioChvx/console_manga_downloader.git
+
         badges:
           - "Python"
           - "BS4"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
+            url: https://github.com/MarioChvx/console_manga_downloader.git
 
 # Achievements
   achievements:
