@@ -104,9 +104,9 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Mario."
-    subtitle: "Software Developer"
+    subtitle: "Data analyst"
     content: |- 
-      A Data Science student. I tend to be more interested in Data and Backend technologies.
+      I am interested in Data science, Machine learning, Deep learning and Linux operative systems.
     image: /images/avatar.jpg
     button:
       enable: true
@@ -122,7 +122,7 @@ params:
         - icon: fab fa-whatsapp
           url: https://wa.me/5215515359878
         - icon: fas fa-envelope
-          url: mailto:contactme@mariochvx.com
+          url: mailto:mariochavez1292@gmail.com
       # customIcons:
       #   - icon: /fav.png
       #     url: "https://example.com"
@@ -241,8 +241,8 @@ params:
     enable: true
     # title: "Send me an email"
     content: If you want to collaborate with me, discuss or chat about my site, give me a tip or anything.
-    email: contactme@mariochvx.com
-    btnName: contactme@mariochvx.com
+    email: mariochavez1292@gmail.com
+    btnName: mariochavez1292@gmail.com
 
   footer:
     # recentPosts: true

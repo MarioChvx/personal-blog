@@ -6,10 +6,10 @@ date: 2022-11-13
 image: /images/blogs/wsl-setup/wsl-screenshot.jpg
 draft: false
 tags:
-    - wsl
     - windows
-    - ubuntu
     - development
+    - linux
+    - virtual machine
 toc:
 ---
 
@@ -77,6 +77,7 @@ There are some different ways to install various Linux Distributions, but I just
 - **Debian:** I prefer this but the version in the store is too old and I had a lot of compatibility problems.
 - **Kali Linux:** A distribution base in Debian and it comes with a lot of security oriented software already installed.
 - **openSUSE:** I haven't use this distribution.
+- **Arch:** Is a rolling release distribution it means that is updated more frequently than others, I do not know who maintains it so I would not recommend to installing it.
 
 Now choose your preferred one and click `Get`, wait till is downloaded and click in `Open` and a terminal will aper with this message `Installing, this may take a few minutes...` just wait till is installed then the terminal will ask you for `Enter new UNIX username:` then `New password:` and a confirmation.
 
