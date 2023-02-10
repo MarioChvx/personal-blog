@@ -13,23 +13,39 @@ tags:
 toc:
 ---
 
-Here I explain the process to install WSL to development, make the basic setup of some useful tools and also explain why I go that way.
+So you want to develop with Linux but also use some Windows exclusive software (games)? That was my case so I tried some of the alternatives dual-booting, game on Linux, use PowerShell, virtual machines (I didn't try PCI passthrough with a Windows vm because it need 2 gpus).
 
-**Why should you use WSL?**
+The sustainable solution I've found is to use Windows as my man OS and put al my programming stuff in WSL, but it has a little inconveniences.
+
+I'll explain the process to install WSL to development and how to get rid of that inconveniences.
+
+<!-- **Why should you use WSL?**
 
 - It's a friendly introduction to Linux.
 - Learning a new operative system will improve your understanding of how computers really works.
 - It can improve your workflow.
 - Most of the computers in the world are running Linux.
-- To look cool on the internet.
+- To look cool on the internet. -->
 
 ## Setting up Windows
 
-First we need to change some settings in window. Now we go to `Settings > Update & Security > For developers` and activate `Developer Mode`.
+First we need to change some settings in Window. Now we go to `Settings > Update & Security > For developers` and activate `Developer Mode`.
 
 Then we go to `Control Panel > Programs > Turn Windows features on and off` here we check the box of **Hyper-V** (I activate **Hyper-V** because some times I have problems if is not enabled) and **Window Subsystem for Linux**. *Btw here you can uncheck Internet Explorer 11 if you want.*
 
 ## Download WSL
+
+### The easy way
+
+In PowerShell type
+
+``` Powershell
+wsl --install
+```
+
+it will download the default distro that is Ubuntu.
+
+### If it did not work
 
 It happens to me that WSL2 have not been downloaded just by checking the option, thats why I use an [installer](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) from Microsoft that I found in a [guide to in install WSL](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) in older versions.
 
@@ -65,6 +81,26 @@ There are some different ways to install various Linux Distributions, but I just
 Now choose your preferred one and click `Get`, wait till is downloaded and click in `Open` and a terminal will aper with this message `Installing, this may take a few minutes...` just wait till is installed then the terminal will ask you for `Enter new UNIX username:` then `New password:` and a confirmation.
 
 Congratulation you have successfully installed WSL.
+
+## The "inconveniences"
+
+First one and the biggest, a lot of times if you leave turn on WSL for a long time a process named **Vmmem** will take the 100% of ram and/or 100% of cpu usage, some times you can still use your pc but others the PC gets unusable, the quick fix is to just run the command `wsl --shutdown` in PowerShell the permanent one has some step but is as easy.
+
+- First to *C:\Users\{YOUR_USER}*
+- Then create a file named ".wslconfig"
+- Inside the file write the next lines
+
+```config
+[wsl2]
+# Max memory usage by WSL
+memory=3GB
+# Max cores will be used by WSL
+processors=4
+```
+
+Thats all after a restart the changes will be applied.
+
+The next are some minor problems relate to the nature of virtual machines. The one I found is that if you try to use a drive with **exFAT** file system to work and run some executables you will have a hard time because the WSL/Linux permission system only works over **NFTS** so take care of that and format your drives as you want.
 
 ## Setting up your distribution
 
