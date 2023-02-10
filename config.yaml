@@ -27,25 +27,37 @@ Menus:
     #   weight: 2
 
 # Dropdown menu
-    # - identifier: dropdown
-    #   title: Example dropdown menu
-    #   name: Dropdown
-    #   weight: 3
-    # - identifier: dropdown1
-    #   title: example dropdown 1
-    #   name: example 1
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 1
-    # - identifier: dropdown2
-    #   title: example dropdown 2
-    #   name: example 2
-    #   url: /#
-    #   parent: dropdown
-    #   weight: 2
+    - identifier: about
+      title: 
+      name: About me
+      weight: 3
+    - identifier: about1
+      title: Introduction
+      name: Introduction
+      url: /#about
+      parent: about
+      weight: 1
+    - identifier: about2
+      title: Experience
+      name: Experience
+      url: /#experience
+      parent: about
+      weight: 1
+    - identifier: about3
+      title: Education
+      name: Education
+      url: /#education
+      parent: about
+      weight: 1
+    - identifier: about4
+      title: Projects
+      name: Projects
+      url: /#Projects
+      parent: about
+      weight: 1
 
 params:
-  title: "Mario Chávez's Webpage"
+  title: "MarioChvx"
   description: Personal site where I talk about my professional history and interests, also about my hobbies.
   # staticPath: ""  # The path to serve the static files from
   favicon: "/2.svg"
@@ -56,10 +68,10 @@ params:
   useBootstrapCDN: true
 
   # Whether the fade animations on the home page will be enabled
-  animate: false
+  animate: true
 
   theme:
-    disableThemeToggle: false
+    disableThemeToggle: true
     # defaultTheme: "light" # dark
 
   # font:
@@ -91,12 +103,14 @@ params:
   #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
   #   brandName: "Profile" # Brand name for the brand | default is the title variable
 
-  #   menus:
-  #     disableAbout: true
-  #     disableExperience: true
-  #     disableEducation: true
-  #     disableProjects: true
-  #     disableAchievements: true
+  navbar:
+    disableSearch: true
+    menus:
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
   #     disableContact: true
 
 # Hero
@@ -133,8 +147,7 @@ params:
     title: "About Me"
     image: "/images/me.jpg"
     content: |-
-      I am a Data Science student with a passion for Data Engineering, Backend Development and Data Bases. I have a strong interest in learning about Big Data, Machine Learning, and OS.
-      Outside Software Development world I also enjoy PC Hardware, Calisthenics, Motorcycles and Cooking.
+      I am a Data Analyst with. I have a strong interest in big bata, machine learning, deep learning, and Unix operative systems. Outside Software Development world. I also enjoy PC hardware, calisthenics, and cooking.
 
       I am currently looking for work, open to learn new skills, developing personal projects with the technologies I like.
     skills:
@@ -147,7 +160,6 @@ params:
         - "Linux"
         - "Bash"
         - "MarkDown"
-        - "Latex"
 
 # Experience
   experience:
