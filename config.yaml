@@ -104,6 +104,7 @@ params:
   #   brandName: "Profile" # Brand name for the brand | default is the title variable
 
   navbar:
+    align: me-auto
     disableSearch: true
     menus:
       disableAbout: true
@@ -251,13 +252,12 @@ params:
   #Contact
   contact:
     enable: true
-    # title: "Send me an email"
+    title: "Contact me"
     content: If you want to collaborate with me, discuss or chat about my site, give me a tip or anything.
     email: mariochavez1292@gmail.com
     btnName: mariochavez1292@gmail.com
 
   footer:
-    # recentPosts: true
     recentPosts:
       path: "blogs"
       count: 3
