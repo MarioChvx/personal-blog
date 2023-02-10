@@ -2,9 +2,10 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.105.0"><meta charset="UTF-8">
+	<meta name="generator" content="Hugo 0.92.2" /><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 <link rel="icon" href=/2.svg type="image/gif">
 
 
@@ -71,6 +72,33 @@
         line-height: 1.5;
         text-align: left;
     }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
 </style>
 
 <meta name="description" content=Personal&#32;site&#32;where&#32;I&#32;talk&#32;about&#32;my&#32;professional&#32;history&#32;and&#32;interests,&#32;also&#32;about&#32;my&#32;hobbies.>
@@ -86,7 +114,7 @@ Mario Chávez
   </title>
 </head>
 
-<body class="light" onload="loading()">
+<body class="light">
   
   
 <script>
@@ -94,7 +122,7 @@ Mario Chávez
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -115,6 +143,13 @@ Mario Chávez
             </a>
 
             
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
@@ -126,43 +161,63 @@ Mario Chávez
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav ms-auto text-center">
                     
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/#about" aria-label="about">About</a>
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#experience"
-                            aria-label="experience">Experience</a>
+                            aria-label="experience">
+                            Experience
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#education"
-                            aria-label="education">Education</a>
+                            aria-label="education">
+                            Education
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#projects"
-                            aria-label="projects">Projects</a>
+                            aria-label="projects">
+                            Projects
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#achievements"
-                            aria-label="achievements">Achievements</a>
+                            aria-label="achievements">
+                            Achievements
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#contact"
-                            aria-label="contact">Contact</a>
+                            aria-label="contact">
+                            Contact
+                        </a>
                     </li>
                     
 
@@ -178,30 +233,33 @@ Mario Chávez
                     </li>
                     
                     
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
                 </ul>
 
-                
-                
-                <div class="text-center">
-                    <button id="theme-toggle">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </div>
-            
-                
             </div>
         </div>
     </nav>
@@ -226,12 +284,15 @@ Mario Chávez
                 <div class="row">
                     <div class="col-auto h-100">
                         
-                        <a href="/files/mario-chavez-resume.pdf" class="btn" download>
+                        <a href="/files/mario-chavez-resume.pdf" class="btn" download
+			  
+                          target="_blank"
+                          >
                             Resume
                         </a>
                         
                     </div>
-                    <div class="col-auto px-0 h-100"><span id="loading-icons" style="display: block;">
+                    <div class="col-auto px-0 h-100"><span>
     
     <span class="px-1">
         <a href="https://github.com/MarioChvx" target="_blank" class="btn social-icon">
@@ -888,7 +949,7 @@ Outside Software Development world I also enjoy PC Hardware, Calisthenics, Motor
 
 <section id="contact" class="py-5">
     <div class="container">
-        <h3 class="text-center">Send me an email</h3>
+        <h3 class="text-center">Get in Touch</h3>
         <div class="px-0 px-md-5 px-lg-5">
             <div class="row justify-content-center px-md-5">
                 <div class="col-md-8 py-3">
@@ -906,13 +967,57 @@ Outside Software Development world I also enjoy PC Hardware, Calisthenics, Motor
             </div>
         </div>
     </div>
+    <div id="contact-form-status"></div>
 </section>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
 
   </div><footer>
     <div class="container py-3" id="recent-posts">
     
-    <div class="h3 text-center text-secondary py-3">Recent posts</div>
+    
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
     <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/wsl-setup/">
+                        <img src="/images/blogs/wsl-setup/wsl-screenshot.jpg" class="card-img-top" alt="Setup WSL for development">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/wsl-setup/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Setup WSL for development">Setup WSL for development</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>So you want to develop with Linux but also use some Windows exclusive software (games)? That was my case so I tried some of the alternatives dual-booting, game on Linux, use PowerShell, virtual machines (I didn&rsquo;t try PCI passthrough with a Windows vm because it need 2 gpus).
+The sustainable …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">November 13, 2022</span>
+                    <a href="/blogs/wsl-setup/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
         
     </div>
     
@@ -972,7 +1077,7 @@ Outside Software Development world I also enjoy PC Hardware, Calisthenics, Motor
                         height="40px" width="40px">
                 </a>
             </div>
-            &copy; 2022  All Rights Reserved
+            &copy; 2023  All Rights Reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -992,7 +1097,7 @@ Outside Software Development world I also enjoy PC Hardware, Calisthenics, Motor
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -1015,18 +1120,19 @@ Outside Software Development world I also enjoy PC Hardware, Calisthenics, Motor
 
 </script>
 
-<script>
-    let loadingIcons;
 
-    function loading() {
-        myVar = setTimeout(showPage, 100);
-    }
+    <script src="/js/search.js"></script>
 
-    function showPage() {
-        try{
-            document.getElementById("loading-icons").style.display = "block";
-        } catch(err) {}
-    }
-</script></body>
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
 
 </html>
