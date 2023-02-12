@@ -119,9 +119,9 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Mario."
-    subtitle: "Data analyst"
+    subtitle: "Data scientist"
     content: |- 
-      I am interested in Data science, Machine learning, Deep learning and Linux operative systems.
+      I am interested in data science, machine learning, deep learning and Linux operative systems.
     image: /images/avatar.jpg
     button:
       enable: true
@@ -148,7 +148,7 @@ params:
     title: "About Me"
     image: "/images/me.jpg"
     content: |-
-      I am a Data Analyst with. I have a strong interest in big bata, machine learning, deep learning, and Unix operative systems. Outside Software Development world. I also enjoy PC hardware, calisthenics, and cooking.
+      I am a Data scientist. I have a strong interest in big bata, machine learning, deep learning, and Unix operative systems. Outside Software Development world. I also enjoy PC hardware, calisthenics, and cooking.
 
       I am currently looking for work, open to learn new skills, developing personal projects with the technologies I like.
     skills:
@@ -267,4 +267,3 @@ params:
     socialNetworks:
       github: https://github.com/MarioChvx
       linkedin: https://linkedin.com/in/mariochvx/
-      # instagram: https://instagram.com
