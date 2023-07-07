@@ -13,7 +13,7 @@ tags:
 toc:
 ---
 
-So you just finished installing Fedora on your system, I'm going to tell you about some useful things that you maybe want to do to improve your experience using fedora.
+So you just finished installing Fedora on your system?, I'm going to tell you about some useful things that you can do to improve your experience using Fedora.
 
 ## Configure DNF
 
@@ -32,15 +32,15 @@ max_parallel_downloads=10
 defaultyes=True
 ```
 
-Then may be you want to update your system `sudo dnf update`
+Then you should update your system `sudo dnf update`
 
 ## Non-free software
 
 ### rpmfusion
 
-During the set up of Fedora just after installing the assistant asks you if you want to allow non-free software, that means that proprietary software can be installed on your system. If you allow it jump to the next point.
+During the set up of Fedora just after installing the assistant asks you if you want to allow non-free software, that means that proprietary software can be installed on your system. If you have allow it jump to the next point, rpmfussion is already enabled on your system.
 
-If you don't know non-free software include important packages like nivida drivers, nouveau drivers works but not as good, thats only one example there are many more such as obs, ffmpeg, steam, etc.
+If you haven't heard about non-free software it is a category of software that include important packages like NVIDIA drivers (nouveau drivers works but not as good) and others such as obs, ffmpeg, steam, etc.
 
 To add rpmfussion run the next command:
 
@@ -67,7 +67,7 @@ More information on [flatpak.org](https://flatpak.org/setup/Fedora)
 
 ## Install codecs
 
-Finally what happens to me was that when I installed discord some fonts doesn't render at all what I fond that fix the problem is installing multimedia codecs. I just run the following commands from [rpmfusion.org/Howto/Multimedia](rpmfusion.org/Howto/Multimedia):
+Something important to mention that happened to me was that when I installed discord some fonts doesn't render at all what I fond that fix the problem was installing multimedia codecs. I just run the following commands from [rpmfusion.org/Howto/Multimedia](rpmfusion.org/Howto/Multimedia):
 
 ```bash
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
@@ -75,4 +75,4 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 sudo dnf groupupdate sound-and-video
 ```
 
-Thats it, thats the things that improve my expirence on Fedora, hope that helps you.
+This was a bit of my experience improving things in Fedora, I hope this article is helpful.
