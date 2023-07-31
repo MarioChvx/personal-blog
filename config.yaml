@@ -58,7 +58,7 @@ Menus:
 
 params:
   title: "MarioChvx"
-  description: Personal site where I talk about my professional history and interests, also about my hobbies.
+  description: Personal site where I talk about my professional history, interests and also about my hobbies.
   # staticPath: ""  # The path to serve the static files from
   favicon: "/2.svg"
 
@@ -148,19 +148,23 @@ params:
     title: "About Me"
     image: "/images/me.jpg"
     content: |-
-      I am a Data scientist. I have a strong interest in big bata, machine learning, deep learning, and Linux operative systems. Outside Software Development world I also enjoy PC hardware, calisthenics, and cooking.
+      I am Mario, a hard-working, cooperative person who likes to learn and find solutions to complex problems. I want to direct my career towards the data and artificial intelligence sector.
+
+      I have a strong interest in big bata, machine learning, deep learning, and Linux operating systems.
+      My interest in the area of data is because I really like mathematics, especially probability and statistics. I think they are great tools because when applied properly, they can provide valuable information that was not very evident at first.
+      Outside Software Development world I also enjoy PC hardware, calisthenics, modelism and cooking.
 
       I am currently looking for work, open to learning new skills, and in my spare time, I’m developing personal projects with the technologies I like.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "Python"
-        - "PostgreSQL"
-        - "GCP"
-        - "Linux"
-        - "Bash"
-        - "MarkDown"
+        - "Programming: Python (numpy, pandas, seaborn, matplotlib, fastapi, scikit-learn, sqlalchemy)."
+        - "Databases: PostgreSQL, MySQL, SQLite, Firebase."
+        - "Mathematics: probability and statistics"
+        - "Operating systems: Linux, Windows."
+        - "Cloud: Google Cloud Platform"
+        - "Others: bash, git, markdwon, latex"
 
 # Experience
   experience:
