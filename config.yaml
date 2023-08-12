@@ -57,7 +57,7 @@ Menus:
 
 
 params:
-  title: "MarioChvx"
+  title: "Mario Chavez"
   description: Personal site where I talk about my professional history, interests and also about my hobbies.
   # staticPath: ""  # The path to serve the static files from
   favicon: "/2.svg"
