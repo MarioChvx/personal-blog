@@ -118,7 +118,7 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Mario."
+    title: "Mario Chavez."
     subtitle: "Data scientist"
     content: |- 
       I am interested in data science, machine learning, deep learning and Linux operative systems.
